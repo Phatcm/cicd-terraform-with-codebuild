@@ -44,8 +44,8 @@ variable "password" {
 }
 
 variable "database_sg_id" {
-  type    = any
-  default = []
+  type        = string
+  description = "database sg"
 }
 
 variable "db_subnet_group_name" {
