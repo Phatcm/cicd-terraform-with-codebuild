@@ -14,11 +14,9 @@ resource "aws_autoscaling_group" "web" {
   }
 
   # Add tags to the instances.
-  tags = [
-    {
-      key                 = "Name"
-      value               = "${var.instances_name}-server"
-      propagate_at_launch = true
+  tag {
+    key                 = "Name"
+    value               = "${var.instances_name}-server"
+    propagate_at_launch = true
     }
-  ]
 }
